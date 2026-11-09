@@ -10,6 +10,11 @@
       "package": "com.zanaxu.radiomexicoestaciones",
       "name": "Radio Mexico",
       "icon": "icons/com.zanaxu.radiomexicoestaciones.png"
+    },
+    {
+      "package": "com.zanaxu.radiomonterrey",
+      "name": "Radio Monterrey",
+      "icon": "icons/com.zanaxu.radiomonterrey.png"
     }
   ]
 }
