@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zanaxú Radios</title>
+  <meta name="description" content="Live radio apps for Android by Zanaxú.">
+  <style>
+    :root {
+      --bg1: #0c1020; --bg2: #123a4f; --card: rgba(255, 255, 255, 0.07);
+      --border: rgba(255, 255, 255, 0.16); --text: #f3f7fa; --muted: #a9bac6; --accent: #ff8a3d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: radial-gradient(ellipse at top, var(--bg2), var(--bg1) 70%) fixed;
+      display: flex; flex-direction: column; align-items: center;
+    }
+    header { text-align: center; padding: 56px 16px 24px; }
+    .bars { display: flex; justify-content: center; align-items: flex-end; gap: 5px; height: 32px; margin-bottom: 16px; }
+    .bars i { width: 6px; height: 100%; border-radius: 3px; background: var(--accent); transform-origin: bottom; animation: pulse 1.1s ease-in-out infinite alternate; }
+    .bars i:nth-child(1) { animation-delay: -0.9s; }
+    .bars i:nth-child(2) { animation-delay: -0.3s; }
+    .bars i:nth-child(3) { animation-delay: -0.7s; }
+    .bars i:nth-child(4) { animation-delay: -0.1s; }
+    .bars i:nth-child(5) { animation-delay: -0.5s; }
+    @keyframes pulse { from { transform: scaleY(0.25); } to { transform: scaleY(1); } }
+    @media (prefers-reduced-motion: reduce) { .bars i { animation: none; transform: scaleY(0.6); } }
+    h1 { margin: 0; font-size: clamp(2rem, 6vw, 3rem); letter-spacing: 0.02em; }
+    header p { margin: 10px 0 0; color: var(--muted); font-size: 1.05rem; }
+    main {
+      width: 100%; max-width: 880px; padding: 16px;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 190px)); justify-content: center; gap: 18px;
+    }
+    a.radio {
+      display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 18px 12px;
+      background: var(--card); border: 1px solid var(--border); border-radius: 18px;
+      color: var(--text); text-decoration: none; transition: transform 0.15s, border-color 0.15s;
+    }
+    a.radio:hover, a.radio:focus-visible { transform: translateY(-3px); border-color: var(--accent); outline: none; }
+    a.radio img { width: 112px; height: 112px; border-radius: 24px; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4); }
+    a.radio span { font-weight: 600; text-align: center; }
+    a.radio small { color: var(--muted); text-align: center; }
+    #status { grid-column: 1 / -1; text-align: center; color: var(--muted); }
+    footer { margin-top: auto; padding: 40px 16px 28px; text-align: center; color: var(--muted); font-size: 0.95rem; }
+    footer a { color: var(--text); margin: 0 10px; display: inline-block; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+    <h1>Zanaxú Radios</h1>
+    <p>Live radio apps for Android.</p>
+  </header>
+
+  <main id="radios">
+    <p id="status">Loading radios…</p>
+  </main>
+
+  <footer>
+    <a href="https://play.google.com/store/apps/developer?id=Zanax%C3%BA">All our apps on Google Play</a>
+    <a href="https://yovanyjls.github.io/app-privacy-policy/zanaxu-apps/">Privacy policy</a>
+    <p>© Zanaxú</p>
+  </footer>
+
+  <script>
+    // Same list the apps show in their "More radios" screen (radios.json in this repository).
+    fetch("radios.json", { cache: "no-cache" })
+      .then((response) => response.json())
+      .then((feed) => {
+        const container = document.getElementById("radios");
+        container.innerHTML = "";
+        for (const radio of feed.radios) {
+          const link = document.createElement("a");
+          link.className = "radio";
+          link.href = "https://play.google.com/store/apps/details?id=" + encodeURIComponent(radio.package);
+          const icon = document.createElement("img");
+          icon.src = radio.icon;
+          icon.alt = "";
+          icon.loading = "lazy";
+          const name = document.createElement("span");
+          name.textContent = radio.name;
+          const store = document.createElement("small");
+          store.textContent = "Get it on Google Play";
+          link.append(icon, name, store);
+          container.append(link);
+        }
+      })
+      .catch(() => {
+        document.getElementById("status").textContent = "Could not load the radios. Please try again later.";
+      });
+  </script>
+</body>
+</html>

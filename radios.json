@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "radios": [
+    {
+      "package": "com.zanaxu.radiomusicdeutscheffnlive",
+      "name": "Radio Music Deutsche FFN Live",
+      "icon": "icons/com.zanaxu.radiomusicdeutscheffnlive.png"
+    },
+    {
+      "package": "com.zanaxu.radiomexicoestaciones",
+      "name": "Radio Mexico",
+      "icon": "icons/com.zanaxu.radiomexicoestaciones.png"
+    }
+  ]
+}
