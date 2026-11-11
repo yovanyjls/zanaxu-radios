@@ -2,6 +2,91 @@
   "version": 1,
   "radios": [
     {
+      "package": "com.zanaxu.radionrwlive",
+      "name": "Radio NRW Live",
+      "icon": "icons/com.zanaxu.radionrwlive.png"
+    },
+    {
+      "package": "com.zanaxu.usaradiostationsfm",
+      "name": "USA Radio Stations FM",
+      "icon": "icons/com.zanaxu.usaradiostationsfm.png"
+    },
+    {
+      "package": "com.zanaxu.radiomonterreynuevoleon",
+      "name": "Radio Monterrey Nuevo León",
+      "icon": "icons/com.zanaxu.radiomonterreynuevoleon.png"
+    },
+    {
+      "package": "com.zanaxu.radioguadalajarajalisco",
+      "name": "Radio Guadalajara Jalisco",
+      "icon": "icons/com.zanaxu.radioguadalajarajalisco.png"
+    },
+    {
+      "package": "com.zanaxu.radioestadodemexicofm",
+      "name": "Radio Estado de México FM",
+      "icon": "icons/com.zanaxu.radioestadodemexicofm.png"
+    },
+    {
+      "package": "com.zanaxu.radiocdmxenvivo",
+      "name": "Radio CDMX en Vivo",
+      "icon": "icons/com.zanaxu.radiocdmxenvivo.png"
+    },
+    {
+      "package": "com.zanaxu.radiobayernlivefm",
+      "name": "Radio Bayern Live FM",
+      "icon": "icons/com.zanaxu.radiobayernlivefm.png"
+    },
+    {
+      "package": "com.zanaxu.britishradiolivefm",
+      "name": "British Radio Live FM",
+      "icon": "icons/com.zanaxu.britishradiolivefm.png"
+    },
+    {
+      "package": "com.zanaxu.rockradioukfm",
+      "name": "Rock Radio UK FM",
+      "icon": "icons/com.zanaxu.rockradioukfm.png"
+    },
+    {
+      "package": "com.zanaxu.radioviejitasperobonitas",
+      "name": "Radio Viejitas Pero Bonitas",
+      "icon": "icons/com.zanaxu.radioviejitasperobonitas.png"
+    },
+    {
+      "package": "com.zanaxu.easylisteningradiouk",
+      "name": "Easy Listening Radio UK",
+      "icon": "icons/com.zanaxu.easylisteningradiouk.png"
+    },
+    {
+      "package": "com.zanaxu.radiosachsenanhaltlive",
+      "name": "Radio Sachsen-Anhalt Live",
+      "icon": "icons/com.zanaxu.radiosachsenanhaltlive.png"
+    },
+    {
+      "package": "com.zanaxu.soulradiouklive",
+      "name": "Soul Radio UK Live",
+      "icon": "icons/com.zanaxu.soulradiouklive.png"
+    },
+    {
+      "package": "com.zanaxu.ukradiostationsfm",
+      "name": "UK Radio Stations FM",
+      "icon": "icons/com.zanaxu.ukradiostationsfm.png"
+    },
+    {
+      "package": "com.zanaxu.radio80sukhits",
+      "name": "Radio 80s UK Hits",
+      "icon": "icons/com.zanaxu.radio80sukhits.png"
+    },
+    {
+      "package": "com.zanaxu.radiodeutschlandlivefm",
+      "name": "Radio Deutschland Live FM",
+      "icon": "icons/com.zanaxu.radiodeutschlandlivefm.png"
+    },
+    {
+      "package": "com.zanaxu.classicrockradiouklive",
+      "name": "Classic Rock Radio UK Live",
+      "icon": "icons/com.zanaxu.classicrockradiouklive.png"
+    },
+    {
       "package": "com.zanaxu.radiomusicdeutscheffnlive",
       "name": "Radio Music Deutsche FFN Live",
       "icon": "icons/com.zanaxu.radiomusicdeutscheffnlive.png"
@@ -10,11 +95,6 @@
       "package": "com.zanaxu.radiomexicoestaciones",
       "name": "Radio Mexico",
       "icon": "icons/com.zanaxu.radiomexicoestaciones.png"
-    },
-    {
-      "package": "com.zanaxu.radiomonterrey",
-      "name": "Radio Monterrey",
-      "icon": "icons/com.zanaxu.radiomonterrey.png"
     }
   ]
 }
