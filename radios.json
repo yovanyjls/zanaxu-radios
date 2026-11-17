@@ -2,26 +2,6 @@
   "version": 1,
   "radios": [
     {
-      "package": "com.zanaxu.radionrwlive",
-      "name": "Radio NRW Live",
-      "icon": "icons/com.zanaxu.radionrwlive.png"
-    },
-    {
-      "package": "com.zanaxu.usaradiostationsfm",
-      "name": "USA Radio Stations FM",
-      "icon": "icons/com.zanaxu.usaradiostationsfm.png"
-    },
-    {
-      "package": "com.zanaxu.radiomonterreynuevoleon",
-      "name": "Radio Monterrey Nuevo León",
-      "icon": "icons/com.zanaxu.radiomonterreynuevoleon.png"
-    },
-    {
-      "package": "com.zanaxu.radioguadalajarajalisco",
-      "name": "Radio Guadalajara Jalisco",
-      "icon": "icons/com.zanaxu.radioguadalajarajalisco.png"
-    },
-    {
       "package": "com.zanaxu.radioestadodemexicofm",
       "name": "Radio Estado de México FM",
       "icon": "icons/com.zanaxu.radioestadodemexicofm.png"
